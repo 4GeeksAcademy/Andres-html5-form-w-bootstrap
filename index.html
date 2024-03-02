@@ -10,21 +10,23 @@
     <title>HTML5 & Bootstrap payment form (by Andres)</title>
 </head>
 <body>
-    <div class="container-fluid justify-content-center">
-        
+
+    
+    <div class="container-fluid justify-content-center justify-text-center">
+
         <!-- Form left-head -->
         <div class="col-10"> 
-            <h1 class="text-bg-light p-2">Payment form example</h1>
+            <h1 class="text-bg-light p-2 border">Payment form example</h1>
 
             <!-- Danger alert -->
-            <div class="col-12 p-2">
+            <div class="col-12 mt-3">
                 <div class="alert alert-danger" role="alert">
                     Some fields are missing!
                   </div>
             </div>
         
-                <!-- Nombre, apellido, ciudad, estado, código postal -->
-                <form class="row g-3">
+                <!-- Numero de tarjeta, cvc, monto -->
+                <form class="row justify-content-center g-3">
 
                     <div class="col-md-8 p-3">
                         <label for="cardnumber" class="form-label">Card Number</label>
@@ -41,6 +43,7 @@
                         <input type="password" class="form-control" id="inputPassword4" placeholder="$">
                     </div>
 
+                    <!-- Nombre y apellido -->
                     <div class="col-md-6">
                             <label for="validationCustom01" class="form-label">First name</label>
                             <input type="text" class="form-control" id="validationCustom01" value="" required>
@@ -56,55 +59,98 @@
                         Looks good!
                         </div>
                 
-                    </div>
-                    <div class="col-md-6">
-                    <label for="inputCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="inputCity">
-                    </div>
-                    <div class="col-md-3">
-                    <label for="inputState" class="form-label">State</label>
-                    <select id="inputState" class="form-select">
-                        <option selected>Pick a state</option>
-                        <option>...</option>
-                    </select>
-                    </div>
-                    <div class="col-md-3">
-                    <label for="inputZip" class="form-label">Postal Code</label>
-                    <input type="text" class="form-control" id="inputZip">
-                    </div>
-                    <div class="col-12">
+                    <!-- Ciudad, estado y codigo postal -->
+                        </div>
+                        <div class="col-md-6">
+                        <label for="inputCity" class="form-label">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="col-md-3">
+                        <label for="inputState" class="form-label">State</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Pick a state</option>
+                            <!-- <option>...</option> -->
 
-                </form>
+                            <option value="AM">Amazonas</option>
+                            <option value="AN">Anzoategui</option>
+                            <option value="AP">Apure</option>
+                            <option value="AR">Aragua</option>
+                            <option value="BA">Barinas</option>
+                            <option value="BO">Bolivar</option>
+                            <option value="CA">Carabobo</option>
+                            <option value="CO">Cojedes</option>
+                            <option value="DA">Delta Amacuro</option>
+                            <option value="DC">Distrito Capital</option>
+                            <option value="FA">Falcon</option>
+                            <option value="GU">Guarico</option>
+                            <option value="VA">Vargas</option>
+                            <option value="LA">Lara</option>
+                            <option value="ME">Merida</option>
+                            <option value="MI">Miranda</option>
+                            <option value="MO">Monagas</option>
+                            <option value="NE">Nueva Esparta</option>
+                            <option value="PO">Portuguesa</option>
+                            <option value="SU">Sucre</option>
+                            <option value="TA">Tachira</option>
+                            <option value="TR">Trujillo</option>
+                            <option value="YA">Yaracuy</option>
+                            <option value="ZU">Zulia</option>
+                            <option value="DF">Dependencias Federales</option>
 
-                    <!-- Card selector -->
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-visa"></i></label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-mastercard"></i></label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-diners-club"></i></label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-discover"></i></label>
-                      </div>
+                        </select>
+                        </div>
+                            <div class="col-md-3">
+                                <label for="inputZip" class="form-label">Postal Code</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+                        <div class="col-12">
+
+                    </form>
+
+                    <!-- Credit card selector -->
+                    <div class="row">
+                        <p>We accept:</p>
+                    <div class="row container-fluid w-25 gap-5 ms-1 bg-secondary">
+                            <div class=" col-1 form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-visa"></i></label>
+                            </div>
+                            <div class="col-1 form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-mastercard"></i></label>
+                            </div>
+                            <div class="col-1 form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-diners-club"></i></label>
+                            </div>
+                            <div class="col-1 form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-discover"></i></label>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- mensaje final -->
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                        <label for="floatingTextarea2">Message</label>
+                    <div class="row flex-row-reverse">
+                        <div class=" col-6 form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Message</label>
+                            <div id="messageHelp" class="form-text">Add any notes here.</div>
+                        </div>
+                    </div>
+                    <!-- Botones del final -->\
+                    
+                    <!-- <div class="row"> -->
+
+                        <div class="modal-footer border bg-light">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-2 align-middle">
+                                <button class="btn btn-secondary me-md-2" type="button">Cancel</button>
+                                <button class="btn btn-primary" type="button">Button</button>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <!-- Botones del final -->
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-secondary me-md-2" type="button">Cancel</button>
-                        <button class="btn btn-primary" type="button">Button</button>
-                      </div>
                 </form>
         </div>
     </div>
